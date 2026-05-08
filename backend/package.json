@@ -2,17 +2,23 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "API REST para app de tareas",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "lint": "eslint ."
   },
   "keywords": [],
-  "author": "MatePF",
+  "author": "Mate-PF",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.3.0",
+    "nodemon": "^3.1.14"
   }
 }

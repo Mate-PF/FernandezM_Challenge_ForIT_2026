@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "MatePF",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

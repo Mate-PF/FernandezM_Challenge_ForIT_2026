@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { getTasks, createTask, deleteTask, updateTask } from '../services/tasks.service'
+import { getTasks, deleteTask, updateTask } from '../services/tasks.service'
 import TaskItem from '../components/TaskItem'
-import TaskForm from '../components/TaskForm'
+import { useNavigate } from 'react-router-dom'
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     loadTasks()
@@ -13,11 +14,6 @@ const TaskList = () => {
   const loadTasks = async () => {
     const data = await getTasks()
     setTasks(data)
-  }
-
-  const handleCreate = async (task) => {
-    await createTask(task)
-    loadTasks()
   }
 
   const handleDelete = async (id) => {
@@ -33,7 +29,7 @@ const TaskList = () => {
   return (
     <div className="container">
       <h1>Mis Tareas</h1>
-      <TaskForm onSubmit={handleCreate} />
+      <button onClick={() => navigate('/new')}>Nueva Tarea</button>
       <div className="task-list">
         {tasks.map(task => (
           <TaskItem

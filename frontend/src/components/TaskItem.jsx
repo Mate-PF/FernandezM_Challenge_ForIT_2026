@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom'
+
 const TaskItem = ({ task, onDelete, onToggle }) => {
+  const navigate = useNavigate()
+
   return (
     <div className={`task-item ${task.completed ? 'completed' : ''}`}>
       <input
@@ -11,7 +15,7 @@ const TaskItem = ({ task, onDelete, onToggle }) => {
         <p>{task.description}</p>
       </div>
       <div className="task-actions">
-        <button>Editar</button>
+        <button onClick={() => navigate(`/edit/${task.id}`)}>Editar</button>
         <button onClick={() => onDelete(task.id)}>Eliminar</button>
       </div>
     </div>

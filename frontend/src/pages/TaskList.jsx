@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getTasks, createTask } from '../services/tasks.service'
+import { getTasks, createTask, deleteTask, updateTask } from '../services/tasks.service'
 import TaskItem from '../components/TaskItem'
 import TaskForm from '../components/TaskForm'
 
@@ -20,6 +20,16 @@ const TaskList = () => {
     loadTasks()
   }
 
+  const handleDelete = async (id) => {
+    await deleteTask(id)
+    loadTasks()
+  }
+
+  const handleToggle = async (task) => {
+    await updateTask(task.id, { completed: !task.completed })
+    loadTasks()
+  }
+
   return (
     <div className="container">
       <h1>Mis Tareas</h1>
@@ -29,6 +39,8 @@ const TaskList = () => {
           <TaskItem
             key={task.id}
             task={task}
+            onDelete={handleDelete}
+            onToggle={handleToggle}
           />
         ))}
       </div>

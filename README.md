@@ -111,19 +111,19 @@ El frontend queda corriendo en `http://localhost:5173`
 ## Screenshots
 
 ### Lista de tareas vacía
-![Lista vacía](screenshots/lista-vacia.png)
+![Lista vacía](screenshots/lista-vacia.PNG)
 
 ### Lista con tareas
-![Lista con tarea](screenshots/lista-con-tarea.png)
+![Lista con tarea](screenshots/lista-con-tarea.PNG)
 
 ### Tarea completada
-![Tarea completada](screenshots/tarea-completada.png)
+![Tarea completada](screenshots/tarea-completada.PNG)
 
 ### Formulario nueva tarea
-![Formulario vacío](screenshots/formulario-vacio.png)
+![Formulario vacío](screenshots/formulario-vacio.PNG)
 
 ### Formulario con datos cargados
-![Formulario cargado](screenshots/formulario-cargado.png)
+![Formulario cargado](screenshots/formulario-cargado.PNG)
 
 ---
 

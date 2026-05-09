@@ -1,9 +1,7 @@
+import TaskList from './pages/TaskList'
+
 const App = () => {
-  return (
-    <div>
-      <h1>Hola Mundo</h1>
-    </div>
-  )
+  return <TaskList />
 }
 
 export default App

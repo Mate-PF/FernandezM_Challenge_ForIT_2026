@@ -6,7 +6,11 @@ Challenge ingreso a Academia ForIT 2026
 **Backend:** Node.js, Express, CORS, dotenv  
 **Frontend:** React, Vite, React Router DOM
 
+---
+
 ## Estructura del proyecto
+
+```
 FernandezM_Challenge_ForIT_2026/
 ├── backend/
 │   └── src/
@@ -19,17 +23,20 @@ FernandezM_Challenge_ForIT_2026/
 │       ├── app.js
 │       └── server.js
 └── frontend/
-└── src/
-├── components/
-│   ├── TaskForm.jsx
-│   └── TaskItem.jsx
-├── pages/
-│   └── TaskList.jsx
-├── services/
-│   └── tasks.service.js
-├── App.jsx
-├── main.jsx
-└── index.css
+    └── src/
+        ├── components/
+        │   ├── TaskForm.jsx
+        │   └── TaskItem.jsx
+        ├── pages/
+        │   └── TaskList.jsx
+        ├── services/
+        │   └── tasks.service.js
+        ├── App.jsx
+        ├── main.jsx
+        └── index.css
+```
+
+---
 
 ## Instalación y ejecución local
 
@@ -52,8 +59,13 @@ npm install
 ```
 
 Crear el archivo `.env` dentro de `backend/`:
+
+```
 PORT=3000
+```
+
 Iniciar el servidor:
+
 ```bash
 npm start
 ```
@@ -70,13 +82,31 @@ npm install
 ```
 
 Crear el archivo `.env` dentro de `frontend/`:
+
+```
 VITE_API_URL=http://localhost:3000/api
+```
+
 Iniciar el frontend:
+
 ```bash
 npm run dev
 ```
 
 El frontend queda corriendo en `http://localhost:5173`
+
+---
+
+## Endpoints de la API
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| GET | /api/tasks | Obtener todas las tareas |
+| POST | /api/tasks | Crear una nueva tarea |
+| PUT | /api/tasks/:id | Actualizar una tarea |
+| DELETE | /api/tasks/:id | Eliminar una tarea |
+
+---
 
 ## Screenshots
 
@@ -92,17 +122,10 @@ El frontend queda corriendo en `http://localhost:5173`
 ### Formulario nueva tarea
 ![Formulario vacío](screenshots/formulario-vacio.png)
 
-### Formulario con datos
+### Formulario con datos cargados
 ![Formulario cargado](screenshots/formulario-cargado.png)
 
-## Endpoints de la API
-
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| GET | /api/tasks | Obtener todas las tareas |
-| POST | /api/tasks | Crear una nueva tarea |
-| PUT | /api/tasks/:id | Actualizar una tarea |
-| DELETE | /api/tasks/:id | Eliminar una tarea |
+---
 
 ## Autor
-MatePF
+Mate-PF
